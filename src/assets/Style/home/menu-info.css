@@ -1,0 +1,10 @@
+/**
+ * description 菜单信息
+ * author zishuai.xu
+ * time 2017/8/1
+ */
+
+.menu-name,.menu-item,.menu-parentid {height: 45px; line-height: 45px; width: 22%;}
+.menu-name input,.menu-item input,.menu-parentid input {width: 50%;}
+.menu-label-input label {width: 270px!important}
+.menu-btn-box {margin-left: 280px!important;}

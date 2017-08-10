@@ -1,0 +1,12 @@
+{
+    "flag":true,
+    "msg":"",
+    "reasult":{
+        "userName":"admin",
+        "userPic":"../img/1.png",
+        "searchResource":"/html5/resourceInfoQuery.html",
+        "addResource":"/html5/resourceInfoCreate.html",
+        "searchUser":"/html5/userInfoQuery.html",
+        "addUser":"/html5/userInfoCreate.html"
+    }
+}

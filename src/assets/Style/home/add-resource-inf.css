@@ -1,0 +1,244 @@
+/**
+ * css1
+ */
+
+/*新增资源信息css start*/
+.resource-inf-wrapper {
+    /*margin-left: 260px;*/
+    padding: 0 20px;
+    color: #fff;
+}
+.resource-inf-wrapper h3 {
+    height: 45px;
+    border-bottom: 1px solid #008000;
+    font-size: 16px;
+    color: #000;
+    line-height: 45px;
+}
+.resource-inf-form {
+    margin-top: 15px;
+}
+.resource-name,
+.resource-url {
+    min-height: 45px;
+}
+.resource-name label,
+.resource-url label {
+    display: inline-block;
+    width: 150px;
+    font-size: 14px;
+    line-height: 45px;    
+    text-align: right;
+}
+
+.resource-name input,
+.resource-url input {
+    margin-left: 10px;
+    padding: 0 5px;
+}
+.resource-url textarea {
+    margin-left: 10px;
+    width: 400px;
+    min-height: 150px;
+}
+.btn-box {
+    margin: 15px 0 0 160px;
+    color: red;
+}
+.btn-box a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #C1BFBF;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+}
+.btn-box a:hover {
+    background-color: #A59C9C;
+}
+/*新增资源信息css end*/
+
+/*查询用户信息css start*/ 
+.user-code,
+.user-name {
+    width: 40%;
+    height: 45px;
+    line-height: 45px;
+}
+.user-code label,
+.user-name label {
+    display: inline-block;
+    /*width: 150px;*/
+    font-size: 14px;
+    color: #5F5959;
+    line-height: 45px;    
+    /*text-align: right;*/
+}
+.user-name input,
+.user-code input {
+    padding: 0 5px;
+    margin-left: 10px;
+    width: 55%;
+}
+.search-box {
+    width: 20%;    
+    line-height: 45px;
+}
+.search-box a {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #C1BFBF;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    line-height: 25px;
+}
+.search-box a:hover {
+    background-color: #A59C9C;
+}
+.user-table {
+    margin-top: 20px;
+}
+.user-table table {
+    table-layout: fixed;
+    width: 100%;
+    border-top: 1px solid #000;
+}
+.user-table tr {
+    height: 50px;
+}
+.user-table tr:hover{
+    background: #ccc;
+}
+.user-table tr:hover{
+    background: #ccc;
+}
+.user-table th,
+.user-table td {
+    border-bottom: 1px solid #A9A9A9;
+}
+.user-table th {
+    font-size: 12px;
+    color: #5F5959;
+}
+.user-table td {
+    font-size: 12px;
+    color: #5F5959;
+    text-align: center;
+}
+.operating button {
+    width: 45px;
+    outline: none;
+    font-size: 12px;
+    color: #000;
+    cursor: pointer;
+}
+.btn-delete {
+    margin-left: 10px;
+}
+/*查询用户信息css end*/
+/*修改用户信息css start*/
+.modiy-user-msg label {
+    width: 125px;
+    text-align: right;
+}
+.modiy-user-msg input {
+    width: 40%;
+}
+.title span {
+    font-size: 16px;
+}
+.title .distribution-name {
+    margin-left: 10px;
+    color: #39EAE4;
+    cursor: pointer;
+}
+.title .distribution-name:hover {
+    color: blue;
+}
+.resource-name select {
+    margin-left: 10px;
+    width: 40%;
+    height: 20px;
+    cursor: pointer;
+}
+/*修改用户信息css end*/
+/*分页css*/
+.paginationDiv {
+    margin: 30px auto 0 auto;
+    height: 55px;
+    min-width: 100px;
+}
+/*修改字典信息组件*/
+.modify-dict-msg label {
+    width: 166px;
+}
+.password-show {
+    position: absolute;    
+    top: 6px;
+    right: 6px;
+    width: 13px;
+    height: 6px;
+    background: url(../../Images/password-show.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+} 
+
+/*增加奖品信息组件*/
+.resource-name .prizeLabel{
+    width: 100px;
+    text-align: left;
+}
+.addBonus-name input{
+    width: 200px;
+    height: 26px;
+}
+.resource-url .prizeLabel{
+    width: 200px;
+    text-align: left;
+}
+.addBonus-text textarea{
+    resize: auto;
+}
+/*查询奖品信息组件*/
+.user-table .prizeTr{
+    min-height: 50px;
+}
+.user-table .ellPrize{
+    white-space: normal;
+}
+/*修改角色信息css start*/
+.role-menu{
+    font-size: 16px;
+    border-top: 1px solid #008000;
+    margin: 30px 0;
+    padding: 10px 0;
+}
+.btn-role-menu{
+    height: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0 2px;
+    cursor: pointer;
+}
+.btn-addrole{
+    font-size: 16px;
+    width: 60px;
+    height:40px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+.fontWeight span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.checkAll{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/*修改角色信息css start*/

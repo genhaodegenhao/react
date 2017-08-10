@@ -1,0 +1,23 @@
+{
+    "flag":true,
+    "msg":"",
+    "result":[{
+        "userId":"11",
+        "userName":"admin",
+        "userRoleId":"12121111",
+        "userRoleName":"系统管理员",
+        "update":"2014-12-12"
+        },{
+        "userId":"11",
+        "userName":"admin",
+        "userRoleId":"12121111",
+        "userRoleName":"系统管理员",
+        "update":"2014-12-12"
+        },{
+        "userId":"11",
+        "userName":"admin",
+        "userRoleId":"12121111",
+        "userRoleName":"系统管理员",
+        "update":"2014-12-12"
+        }]
+}
