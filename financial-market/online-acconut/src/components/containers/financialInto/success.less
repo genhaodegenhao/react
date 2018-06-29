@@ -1,0 +1,65 @@
+.sliderLine(@color) {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid @color;
+  box-shadow: inset 0 0 0 0 @color;
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  z-index: 5;
+}
+
+:global {
+  .financialInto {
+    .am-result .am-result-title {
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    .am-icon {
+      width: 104px !important;
+      height: 104px !important;
+    }
+
+    .am-button {
+      width: 100%;
+    }
+
+    .am-steps-small .am-steps-item-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.productInfo {
+  padding: 40px 30px;
+  font-size: 26px;
+  background: #fff;
+
+  .stepInto {
+    margin-bottom: 80px;
+  }
+}
+
+.fundSupport {
+  margin: 300px auto 0;
+  color: #999;
+  text-align: center;
+
+  .texttop {
+    font-size: 24px;
+    margin-bottom: 6px;
+
+    img {
+      width: 102px;
+      height: 30px;
+    }
+  }
+
+  .textbottom {
+    font-size: 20px;
+  }
+}

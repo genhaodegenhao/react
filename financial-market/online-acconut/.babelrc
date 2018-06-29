@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "ie >= 10"]
+      }
+    }],
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "loose": true,
+    "modules": false,
+    "development": {
+    }
+  },
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-decorators-legacy",
+    "transform-runtime",
+    ["import", { "libraryName": "antd-mobile", "style": true }]
+  ]
+}

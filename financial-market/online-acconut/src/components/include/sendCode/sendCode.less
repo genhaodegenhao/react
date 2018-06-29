@@ -1,0 +1,65 @@
+.verifyCodeArea {
+  width: 750px;
+  height: 550px;
+  background: #fff;
+
+  .backArea {
+    height: 106px;
+    line-height: 106px;
+    text-align: center;
+    font-size: 34px;
+    position: relative;
+  }
+
+  .backArea::after {
+    .sliderLine(#e5e7ed);
+  }
+
+  .backAreaIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 35px;
+
+    .backIcon {
+      width: 20px;
+      height: 36px;
+      vertical-align: middle;
+    }
+  }
+
+  .codeInfo {
+    padding-left: 32px;
+    text-align: left;
+
+    .codeMessage {
+      font-size: 28px;
+      color: #8f8f8f;
+      margin: 30px 0;
+    }
+
+    .codeMsg {
+      display: flex;
+      color: #333;
+
+      .inputCode {
+        width: 432px;
+        height: 80px;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .buyingBtnAgain {
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    color: #fff;
+    background: #f54d4f;
+    font-size: 34px;
+    border-radius: 4px;
+    margin: 72px 32px 0;
+  }
+}

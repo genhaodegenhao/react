@@ -1,0 +1,70 @@
+@import url('../buyingProduct/buying.less');
+
+:global {
+  .financialOutPage {
+    .am-radio-inner {
+      background: url('../../../assets/img/investment/ic_radio_off.png');
+      background-size: 100% 100%;
+    }
+
+    .am-radio-inner::after {
+      width: 0.4rem;
+      height: 0.4rem;
+      border-style: none;
+      background: url('../../../assets/img/investment/ic_radio.png');
+      background-size: 100% 100%;
+      top: 0;
+      right: 0;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.allOut {
+  display: flex;
+  color: #8f8f8f;
+  padding-right: 30px;
+  justify-content: space-around;
+
+  .buyingTip {
+    flex: 1;
+    font-size: 24px;
+
+    span {
+      margin: 0 5px;
+    }
+  }
+
+  .allOutText {
+    font-size: 28px;
+    color: blue;
+    margin-top: 20px;
+  }
+}
+
+.outType {
+  background: #fff;
+  margin-top: 20px;
+
+  .outText {
+    display: flex;
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+    padding: 0 30px;
+    justify-content: space-around;
+    position: relative;
+
+    .outTip {
+      flex: 1;
+    }
+
+    .outRule {
+      color: blue;
+    }
+  }
+
+  .outText::after {
+    .sliderLine(#ccc);
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "env": "default",
+  "publicPath": "http://localhost:3000",
+  "host": "localhost",
+  "port": "3000",
+  "jsSourcePath": "src",
+  "distDirectory": "dist",
+  "templatePage": "public/index.html",
+  "serverIndex": "index.html",
+  "debug": false,
+  "bundleConfig":
+    {
+
+    }
+  ,
+  "vendorList": [
+    "axios",
+    "react-router-transition"
+  ],
+  "fetchConfig": {
+    "isMock": true,
+    "fetchUrl": "http://99bill.com:8888"
+  },
+  "mockConfig": {
+    "mockUrl": "",
+    "port": 8888
+  },
+  "appEntry": {
+    "index": "./src/views/index/entry.jsx"
+  }
+}

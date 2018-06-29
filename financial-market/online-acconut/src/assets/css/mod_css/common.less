@@ -1,0 +1,141 @@
+/* stylelint-disable */
+/*===========================
+=            1px            =
+===========================*/
+.-border-all,
+.-border-top,
+.-border-right,
+.-border-bottom,
+.-border-left {
+    position: relative;
+}
+
+.-border-all:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    line-height: 0;
+    border: 1px solid #e1e1e1;
+    -webkit-transform-origin: left top;
+    z-index: 1;
+}
+
+.-border-bottom:after,
+.-border-top:before {
+    content: " ";
+    height: 1px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.-border-top:before {
+    position: absolute;
+    top: 0;
+    background: #e1e1e1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    z-index: 1;
+}
+
+.-border-bottom:after {
+    position: absolute;
+    bottom: 0;
+    background: #e1e1e1;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    z-index: 1;
+}
+
+.-border-left:before,
+.-border-right:after {
+    content: "";
+    width: 1px;
+    top: 0;
+    background: #e1e1e1;
+    z-index: 1;
+}
+
+.-border-left:before {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    z-index: 1;
+}
+
+.-border-right:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    z-index: 1;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+not all {
+    .-border-bottom:after,
+    .-border-top:before {
+        -webkit-transform: scaleY(.667);
+    }
+    .-border-left:before,
+    .-border-right:after {
+        -webkit-transform: scaleX(.667);
+    }
+    .-border-all:before {
+        right: -50%;
+        bottom: -50%;
+        -webkit-transform: scale(0.667, .667);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2),
+not all {
+    .-border-bottom:after,
+    .-border-top:before {
+        -webkit-transform: scaleY(.5);
+    }
+    .-border-left:before,
+    .-border-right:after {
+        -webkit-transform: scaleX(.5);
+    }
+    .-border-all:before {
+        right: -100%;
+        bottom: -100%;
+        -webkit-transform: scale(0.5, .5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3),
+not all {
+    .-border-bottom:after,
+    .-border-top:before {
+        -webkit-transform: scaleY(.3333);
+    }
+    .-border-left:before,
+    .-border-right:after {
+        -webkit-transform: scaleX(.3333);
+    }
+    .-border-all:before {
+        right: -200%;
+        bottom: -200%;
+        -webkit-transform: scale(0.33333, .33333);
+    }
+}
+
+.-border-no-top:before {
+    height: 0;
+}
+
+/*=====  End of 1px  ======*/
+
+/*清除浮动*/  
+.clear{clear: both;}  
+  
+/*清除浮动--推荐使用*/  
+.clearfix:before,.clearfix:after{content: '';display: table;}  
+.clearfix:after{clear: both;}

@@ -1,0 +1,87 @@
+:global(body) {
+  background-color: #f3f4f6;
+  -webkit-overflow-scrolling: touch;
+}
+
+:global(.pages) {
+  position: absolute;
+}
+
+:global(.views) {
+  position: absolute;
+}
+
+:global(#root .am-navbar-light .am-navbar-title) {
+  font-size: 36px;
+}
+
+:global(#root .am-icon) {
+  width: 32px;
+  height: 32px;
+}
+
+:global(#root .am-navbar) {
+  height: 72px;
+}
+
+:global(#detail .cover-am-list-line) {
+  box-shadow: inset 0 -1px 0 0 #dedede;
+}
+
+:global(#detail .cover-am-list-content) {
+  display: flex;
+  justify-content: space-between;
+}
+
+:global(.border-bottom) {
+  position: relative;
+}
+
+:global(.border-bottom::after) {
+  content: ' ';
+  height: 1px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  background: #e1e1e1;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  z-index: 1;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  not all {
+  :global(.border-bottom::after) {
+    -webkit-transform: scaleY(0.667);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  not all {
+  :global(.border-bottom::after) {
+    -webkit-transform: scaleY(0.5);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+  not all {
+  :global(.border-bottom::after) {
+    -webkit-transform: scaleY(0.333);
+  }
+}
+
+:global(#root .am-button-primary.am-button-active) {
+  background-color: #f54d4f;
+}
+
+:global(#root .am-list-thumb) {
+  display: flex;
+  align-items: center;
+}
+
+:global(#root .am-steps-item-process .am-steps-item-icon) {
+  background-color: rgb(31, 144, 230);
+  border-color: rgb(31, 144, 230);
+}
+

@@ -1,0 +1,17 @@
+{
+  "env": "production",
+  "publicPath": "https://oms-cloud.99bill.com/prod/html/financial-market",
+  "host": "localhost",
+  "port": "3000",
+  "fetchConfig": {
+    "isMock": false,
+    "fetchUrl": [
+      "https://ebd.99bill.com/coc-wechat-gateway",
+      "https://ebd.99bill.com/coc-bill-api"
+    ],
+    "mockUrl": [
+      "https://rap-mock.99bill.com/mockjsdata/89",
+      "http://192.168.55.202:7300/mock/5b1a491c7ee13f0b4831c9ef/financial-market/coc-bill-api"
+    ]
+  }
+}

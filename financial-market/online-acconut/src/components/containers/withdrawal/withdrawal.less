@@ -1,0 +1,53 @@
+@theme-red: #f54;
+@theme-line: #e4e9ed;
+
+.wrap {
+  font-size: 36px;
+  color: #999;
+
+  .numberInput {
+    display: block;
+    font-size: 60px;
+    border: none;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: #ccc;
+    }
+  }
+
+  .bankImg {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .inputItem {
+    border-radius: 8px;
+    border: 1px solid #dedede;
+  }
+}
+
+:global {
+  .withdrawalPage .numberInputWrap {
+    font-size: 60px;
+
+    .am-input-control input {
+      font-size: 60px !important;
+    }
+
+    .am-list-line::after {
+      background: none !important;
+    }
+
+    .am-list-item .am-input-clear {
+      background-position: 2px 2px;
+    }
+  }
+}

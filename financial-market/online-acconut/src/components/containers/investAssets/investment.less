@@ -1,0 +1,335 @@
+.sliderLine(@color) {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid @color;
+  box-shadow: inset 0 0 0 0 @color;
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  z-index: 5;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.investHeader {
+  width: 750px;
+  background-image: linear-gradient(-136deg, #fa6f53 0%, #f54d4f 84%);
+  position: relative;
+
+  .top {
+    padding: 55px 0 43px 32px;
+    position: relative;
+
+    .totalText {
+      font-size: 26px;
+      color: #ffded7;
+    }
+
+    .totalAmt {
+      font-size: 70px;
+      color: #fff;
+    }
+  }
+
+  .financeIcon {
+    width: 296px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.totalEarnings {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 32px;
+  background: #fff;
+  opacity: 0.98;
+  font-size: 24px;
+  color: #a0a4ad;
+}
+
+.investList {
+  color: inherit;
+  padding: 22px 22px 18px 18px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      height: 230px;
+      background: #fff;
+      list-style: none;
+      margin-bottom: 18px;
+      padding: 24px 30px 36px;
+      position: relative;
+    }
+  }
+}
+
+.investList {
+  .holdingIcon {
+    width: 168px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
+  .listTop {
+    display: flex;
+    position: relative;
+    padding-bottom: 16px;
+
+    .bankIcon {
+      width: 58px;
+      height: 58px;
+      border: 1px solid #dedede;
+      border-radius: 8px;
+      margin-right: 24px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .bankDes {
+      .bankName {
+        color: #333;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 14px;
+      }
+
+      .bankNumber {
+        font-size: 24px;
+        color: #888;
+      }
+    }
+  }
+
+  .listTop::after {
+    .sliderLine(#e4e4e4);
+  }
+
+  .listContent {
+    margin-top: 40px;
+
+    .bankPrice {
+      font-size: 56px;
+      color: #f54d4f;
+    }
+
+    .bankPriceDes {
+      display: flex;
+      margin-top: 21px;
+
+      .ownPrice {
+        font-size: 24px;
+        color: #888;
+        flex: 1;
+      }
+
+      .earningDay {
+        font-size: 26px;
+        color: #3a3a3a;
+        flex: 1;
+      }
+    }
+  }
+}
+
+/* 投资详情 */
+.assetDetail {
+  width: 750px;
+  height: 259px;
+  background-image: linear-gradient(-136deg, #fa6f53 0%, #f54d4f 84%);
+  position: relative;
+
+  .top {
+    padding: 55px 0 30px 32px;
+    position: relative;
+
+    .totalText {
+      font-size: 26px;
+      color: #ffded7;
+    }
+
+    .totalAmt {
+      font-size: 70px;
+      color: #fff;
+      margin-top: 16px;
+    }
+  }
+
+  .bottom {
+    font-size: 24px;
+    color: #ffded7;
+    padding-left: 32px;
+  }
+
+  .sidebarAccount {
+    width: 214px;
+    height: 60px;
+    line-height: 60px;
+    background-image: linear-gradient(-139deg, #f86c61 0%, #f85950 94%);
+    border: 1px solid #ffb5b5;
+    box-shadow: 12px 8px 10px 0 rgba(141, 19, 19, 0.2);
+    border-radius: 200px 0 0 200px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -30px;
+    display: flex;
+
+    img {
+      width: 28px;
+      height: 28px;
+      vertical-align: top;
+    }
+
+    .accountIcon {
+      margin: 20px 10px 0 26px;
+    }
+
+    .account {
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+
+  .bottomBack {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -8px;
+
+    img {
+      width: 486px;
+      height: 109px;
+    }
+  }
+}
+
+.currentDate {
+  height: 88px;
+  line-height: 88px;
+  background: #fff;
+  padding-left: 28px;
+  display: flex;
+
+  .icon {
+    margin-right: 28px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      vertical-align: top;
+      margin-top: 25px;
+    }
+  }
+
+  .rightArea {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      font-size: 30px;
+      color: #333;
+      align-self: center;
+      flex: 1;
+    }
+
+    .num {
+      font-size: 30px;
+      color: #808086;
+      align-self: center;
+    }
+
+    .arrow {
+      margin: 0 16px 0 14px;
+
+      img {
+        width: 42px;
+        height: 42px;
+        vertical-align: top;
+        margin-top: 23px;
+      }
+    }
+  }
+
+  .rightArea::after {
+    .sliderLine(#dedede);
+  }
+}
+
+/* 定期产品详情页 */
+.detailText {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 32px;
+  font-size: 24px;
+}
+
+.assetEarning {
+  margin-top: 20px;
+  font-size: 26px;
+  background: #fff;
+  padding: 0 32px;
+
+  ul {
+    position: relative;
+  }
+
+  li {
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+
+    .innerLeft {
+      flex: 1;
+      color: #666;
+    }
+
+    .innerRight {
+      color: #181818;
+    }
+
+    .readMore {
+      color: #6a9cd9;
+    }
+  }
+
+  .productInfoOne,
+  .productInfoThree {
+    position: relative;
+  }
+
+  .productInfoOne::after,
+  .productInfoThree::after {
+    .sliderLine(#ccc);
+  }
+}

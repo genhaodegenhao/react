@@ -1,0 +1,295 @@
+.sliderLine(@color) {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid @color;
+  box-shadow: inset 0 0 0 0 @color;
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  z-index: 5;
+}
+
+:global {
+  .buyingPage {
+    .am-list-body::before {
+      height: 0 !important;
+    }
+
+    .am-list-body::after {
+      height: 0 !important;
+    }
+
+    .am-list-item .am-input-clear {
+      width: 40px;
+      height: 40px;
+      background-image: url('../../../assets/img/investment/edit_clear.png');
+      background-size: cover;
+      background-position: 0;
+    }
+
+    .am-list-item.am-input-item {
+      padding-left: 0;
+    }
+  }
+
+  .buyingPageGetCode {
+    .am-button {
+      width: 300px;
+      height: 88px;
+      line-height: 88px;
+      font-size: 30px;
+      border: 1px solid #dedede !important;
+      margin-left: 10px;
+      border-radius: 4px;
+    }
+
+    .am-list-line::after {
+      background: none !important;
+    }
+
+    .am-button::before {
+      border: none !important;
+      border-radius: 4px !important;
+    }
+
+    .am-button.am-button-disabled {
+      color: #333;
+      opacity: 1;
+    }
+  }
+}
+
+.buyingPageBankName {
+  font-size: 26px;
+  color: #8f8f8f;
+  padding: 22px 0 12px 30px;
+  display: flex;
+
+  .divide {
+    width: 1px;
+    height: 26px;
+    background: #8f8f8f;
+    margin: 0 5px;
+  }
+}
+
+.buyingPagebankInfo {
+  height: 76px;
+  background: #fff;
+  padding: 24px 28px 20px 30px;
+  position: relative;
+  display: flex;
+
+  .bankIcon {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    margin-right: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+
+  .bankDec {
+    .bankInfo {
+      color: #333;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .availableBalance {
+      font-size: 24px;
+      color: #a0a4ad;
+      margin-top: 6px;
+    }
+  }
+
+  .charge {
+    width: 120px;
+    height: 52px;
+    line-height: 56px;
+    text-align: center;
+    background: #f54d4f;
+    border-radius: 3px;
+    font-size: 28px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    margin-top: -26px;
+  }
+}
+
+.buyingPagebuyingAmt {
+  background: #fff;
+  margin-top: 20px;
+  padding: 32px 0 25px 30px;
+
+  .buyingAmtTitle {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .buyingAmt {
+    position: relative;
+    padding-bottom: 20px;
+
+    input {
+      font-size: 60px;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #ccc;
+    }
+  }
+
+  .buyingAmt::after {
+    .sliderLine(#ccc);
+  }
+
+  .buyingTip {
+    font-size: 24px;
+    color: #8f8f8f;
+    margin-top: 24px;
+
+    span {
+      color: #f54d4f;
+      padding: 0 5px;
+    }
+  }
+}
+
+.buyingBtn {
+  width: 690px;
+  height: 88px;
+  line-height: 88px;
+  text-align: center;
+  color: #fff;
+  font-size: 34px;
+  background: #c5cacf;
+  border-radius: 4px;
+  margin: 48px auto 0;
+}
+
+.activeBuyingBtn {
+  .buyingBtn;
+
+  background: #f54d4f;
+}
+
+.buyingPagebuyingAgreement {
+  line-height: 32px;
+  padding: 40px 28px 0;
+  display: flex;
+
+  .selectIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .buyingAgreement {
+    font-size: 26px;
+    color: #8f8f8f;
+    margin-left: 20px;
+  }
+}
+
+.fundSupport {
+  margin: 300px auto 0;
+  color: #999;
+  text-align: center;
+
+  .texttop {
+    font-size: 24px;
+    margin-bottom: 6px;
+
+    img {
+      width: 102px;
+      height: 30px;
+    }
+  }
+
+  .textbottom {
+    font-size: 20px;
+  }
+}
+
+.verifyCodeArea {
+  width: 750px;
+  height: 550px;
+  background: #fff;
+
+  .backArea {
+    height: 106px;
+    line-height: 106px;
+    text-align: center;
+    font-size: 34px;
+    position: relative;
+  }
+
+  .backArea::after {
+    .sliderLine(#e5e7ed);
+  }
+
+  .backAreaIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 35px;
+
+    .backIcon {
+      width: 20px;
+      height: 36px;
+      vertical-align: middle;
+    }
+  }
+
+  .codeInfo {
+    padding: 0 32px;
+    text-align: left;
+
+    .codeMessage {
+      font-size: 28px;
+      color: #8f8f8f;
+      margin: 30px 0;
+    }
+
+    .codeMsg {
+      display: flex;
+      color: #333;
+      justify-content: space-around;
+
+      .inputCode {
+        box-sizing: border-box;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        padding: 0 12px;
+      }
+    }
+  }
+
+  .buyingBtnAgain {
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    color: #fff;
+    background: #c5cacf;
+    font-size: 34px;
+    border-radius: 4px;
+    margin: 72px 32px 0;
+  }
+
+  .activeBuyingBtnAgain {
+    .buyingBtnAgain;
+
+    background: #f54d4f;
+  }
+}

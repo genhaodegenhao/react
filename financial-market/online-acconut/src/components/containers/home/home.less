@@ -1,0 +1,119 @@
+@theme-red: #f54d4f;
+@theme-line: #e4e9ed;
+@theme-line2: #eeeef0;
+
+.wrap {
+  font-size: 36px;
+  color: #999;
+
+  .tool {
+    background: @theme-red;
+    color: #fff;
+    height: 160px;
+    background-image: linear-gradient(90deg, #ff7a5b 0%, #f54d4f 100%);
+
+    .toolTtem {
+      padding: 24px;
+      text-align: center;
+      font-size: 22px;
+
+      img {
+        width: 68px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .carouselItem {
+    min-height: 200px;
+    // height: 200px;
+    background: @theme-line;
+  }
+
+  .product {
+    background: #fff;
+
+    .prdType {
+      padding: 30px;
+      font-size: 30px;
+      color: #333;
+      border-left: 4px solid @theme-red;
+      border-bottom: 1px solid @theme-line2;
+    }
+
+    .prdMain {
+      margin: 0;
+      padding-left: 48px;
+
+      li {
+        list-style: none;
+        font-size: 28px;
+        color: #92959e;
+        padding: 48px 0;
+        border-bottom: 1px solid @theme-line2;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .prdTitle {
+        color: #7a7d85;
+        font-size: 28px;
+      }
+
+      .prdItemPerWrap {
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 1px;
+          background: @theme-line;
+          position: absolute;
+          right: 0;
+          top: 30px;
+          bottom: 0;
+        }
+      }
+
+      .prdItemPer {
+        font-size: 60px;
+        height: 100px;
+        line-height: 100px;
+        color: @theme-red;
+
+        .prdItemPer2 {
+          font-size: 24px;
+          padding-left: 4px;
+        }
+      }
+
+      .prdLine {
+        background: @theme-line;
+        width: 2px;
+        height: 100%;
+      }
+
+      .prdItemSloganWrap {
+        padding-left: 20px;
+      }
+
+      .prdItemSlogan {
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+        color: #62656d;
+      }
+
+      .prdItemPerDesc,
+      .prdItemSloganDesc {
+        font-size: 24px;
+      }
+    }
+  }
+}
