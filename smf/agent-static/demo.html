@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.min.css">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.colors.min.css">
+</head>
+<body>
+    <script src="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/js/framework7.min.js"></script>
+    <!-- <script type="text/javascript" src="./vconsole.min.js"></script> -->
+    <script type="text/javascript" src="./config.js"></script> 
+   
+    <script>
+        window.$$ = Dom7;
+        var app = new Framework7();
+
+        var generateUUID = function() { //生成uuid
+            var d = +new Date()
+            var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = (d + Math.random()*16)%16 | 0
+                d = Math.floor(d/16)
+                return (c=='x' ? r : (r&0x3|0x8)).toString(16)
+            })
+            return uuid;
+        };
+        /**
+         * [getNowFormatDate 生成当前时间]
+         * @return {[type]} [description]
+         */
+        var getNowFormatDate = function() {
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (hours >= 0 && hours <= 9) {
+                hours = "0" + hours;
+            }
+            if (minutes >= 0 && minutes <= 9) {
+                minutes = "0" + minutes;
+            }
+            if (seconds >= 0 && seconds <= 9) {
+                seconds = "0" + seconds;
+            }
+            
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + hours + seperator2 + minutes + seperator2 + seconds;
+            return currentdate;
+        };
+        /**
+         * [GetQueryString 获取url参数]
+         * @param {[type]} name [description]
+         */
+        var GetQueryString = function(name) {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        };
+        var userAgent = 'GENERAL_BROWSER';
+        if (/MicroMessenger/.test(window.navigator.userAgent)) {
+            userAgent = 'WX'
+        } else if (/AlipayClient/.test(window.navigator.userAgent)) {
+            userAgent = 'ALIPAY'
+        }
+        sessionStorage.setItem('userAgent', userAgent); //app容器类型
+        sessionStorage.setItem('qrCode', GetQueryString('qrCode')); //二维码类型
+        var commonUrl = 'https://ebd.99bill.com/coc-bill-api/csb/qrcode/validate';
+        if(location.href.indexOf("sandbox")!=-1){
+          commonUrl = 'https://ebd-sandbox.99bill.com/coc-bill-api/csb/qrcode/validate';
+        };
+        var data = {
+                appId: config.appId,
+                traceId: generateUUID(),
+                requestTime: getNowFormatDate(),
+                qrCode:sessionStorage.getItem('qrCode')
+            },
+          
+            parameters = {
+                method:'POST',
+                url:commonUrl,
+                contentType:'application/json;charset=UTF-8',
+                data:JSON.stringify(data),
+                success:function(data){
+                    data = JSON.parse(data);
+                    if(data.rspCode === '0000'){
+                      window.location.href="./index.html?merchantCode="+data.merchantCode+"&merchantName="+data.merchantName+"&branchId="+data.branchId+"&branchName="+data.branchName+"&merchantId="+data.merchantId+"&terminalId="+data.terminalId+"&bizType=0&erpSupport="+data.erpSupport+"&orderUrl="+data.orderUrl+"&notifyUrl="+data.notifyUrl+""
+                    }
+                },
+                error:function(data){
+                    app.alert('请求异常！');
+                }
+            };
+        $$.ajax(parameters);
+  </script>
+</body>
+
+</html>

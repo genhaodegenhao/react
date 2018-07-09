@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "advice": "身份证不相符",
+      "applyDate": "2018-01-17",
+      "billAccount": "12333333",
+      "dealTime": "2018-01-18",
+      "merchantName": "南京周黑鸭有限公司",
+      "orderId": "31233321234",
+      "status": 0
+    },
+    {
+      "advice": "身份证不相符2",
+      "applyDate": "2018-01-17",
+      "billAccount": "12333333",
+      "dealTime": "2018-01-18",
+      "merchantName": "南京周黑鸭有限公司",
+      "orderId": "31233321234",
+      "status": 1
+    },
+    {
+      "advice": "身份证不相符3",
+      "applyDate": "2018-01-17",
+      "billAccount": "12333333",
+      "dealTime": "2018-01-18",
+      "merchantName": "南京周黑鸭有限公司",
+      "orderId": "31233321234",
+      "status": 2
+    }
+  ],
+  "message": "成功",
+  "status": "0",
+  "total": 10
+}

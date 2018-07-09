@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.min.css">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="/csb-1.0/res/css/app.css.less">
+</head>
+
+<body>
+  <div class="views">
+    <div class="view view-main">
+      <div class="pages page">
+      </div>
+    </div>
+  </div>
+  <!-- <div id="paySure"  class="pay-sure"></div> -->
+  <script src="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/js/framework7.min.js"></script>
+  <script src="https://img.99bill.com/seashell/webapp/lib/react/15.3.1/react-with-dom.min.js"></script>
+  <!-- 键盘主文件 -->
+  <!-- <script src="https://img.99bill.com/seashell/webapp/lib/paypad/paypad-1.1.3.min.js"></script> -->
+  <!-- <script src="https://oms-cloud.99bill.com/stage2/html/loan-bus/js/keypad.min.js "></script> -->
+  <script src="main.entry.jsx"></script>
+
+<script>
+  var number = document.getElementById("number");
+    function moneyInitClick(){
+        number.click();
+    }
+    window.onload=moneyInitClick;
+</script> 
+
+<script type="text/javascript">
+    var browserHistory = JSON.parse(window.localStorage.getItem('browserHistory'));
+    if(browserHistory[0] == "index") {
+      browserHistory.push('default');
+      window.localStorage.setItem('browserHistory',JSON.stringify(browserHistory));
+    }
+</script>
+</body>
+
+</html>

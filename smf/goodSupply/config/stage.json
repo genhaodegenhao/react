@@ -1,0 +1,15 @@
+{
+  "env": "stage",
+  "publicPath": "https://pay.99bill.com/stage2/html/smf",
+  "host": "pay.99bill.com",
+  "port": "80",
+  "fetchConfig": {
+    "isMock": false,
+    "fetchUrl": "https://ebd.99bill.com/coc-bill-api",
+    "wxAppId": "wxae9267e08251c228",
+    "zfbAppId": "2017090608586834",
+    "appId": "coc-bill-api",
+    "redirectUrl": "https://pay.99bill.com/stage2/html/smf/goodSupply.html#!/p/confirmorder.html"
+  },
+  "debug": true
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.min.css">
+  <link rel="stylesheet" href="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/css/framework7.ios.colors.min.css">
+</head>
+  
+<body>
+    <script src="https://img.99bill.com/seashell/webapp/lib/framework7/1.1.1/js/framework7.min.js"></script>
+     <script type="text/javascript" src="./vconsole.min.js"></script>
+    <script type="text/javascript" src="./config.js?v=1.1.4"></script>
+    <script>
+        window.$$ = Dom7;
+        var app = new Framework7();
+
+        var generateUUID = function() { //生成uuid
+            var d = +new Date()
+            var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = (d + Math.random()*16)%16 | 0
+                d = Math.floor(d/16)
+                return (c=='x' ? r : (r&0x3|0x8)).toString(16)
+            })
+            return uuid;
+        };
+        /**
+         * [getNowFormatDate 生成当前时间]
+         * @return {[type]} [description]
+         */
+        var getNowFormatDate = function() {
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (hours >= 0 && hours <= 9) {
+                hours = "0" + hours;
+            }
+            if (minutes >= 0 && minutes <= 9) {
+                minutes = "0" + minutes;
+            }
+            if (seconds >= 0 && seconds <= 9) {
+                seconds = "0" + seconds;
+            }
+            
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + hours + seperator2 + minutes + seperator2 + seconds;
+            return currentdate;
+        };
+        /**
+         * [GetQueryString 获取url参数]
+         * @param {[type]} name [description]
+         */
+        var GetQueryString = function(name) {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  decodeURI(r[2]); return null;
+        };
+        var userAgent = 'GENERAL_BROWSER';
+        if (/MicroMessenger/.test(window.navigator.userAgent)) {
+            userAgent = 'WX'
+        } else if (/AlipayClient/.test(window.navigator.userAgent)) {
+            userAgent = 'ALIPAY'
+        }
+        sessionStorage.setItem('userAgent', userAgent); //app容器类型
+        sessionStorage.setItem('requestTime', GetQueryString('requestTime')); //二维码类型
+        var externalTraceNo = GetQueryString('externalTraceNo')?GetQueryString('externalTraceNo'):"";
+        var merchantCode = GetQueryString('merchantCode')?GetQueryString('merchantCode'):"";
+        var merchantId = GetQueryString('merchantId')?GetQueryString('merchantId'):"";
+        var terminalId = GetQueryString('terminalId')?GetQueryString('terminalId'):"";
+        var amt        = GetQueryString('amt')?GetQueryString('amt'):"";
+        var secretInfo = GetQueryString('secretInfo')?GetQueryString('secretInfo'):"";
+        var branchName = GetQueryString('branchName')?GetQueryString('branchName'):"";
+        var branchId   = GetQueryString('branchId')?GetQueryString('branchId'):"";
+        var productInfo= GetQueryString('productInfo')?GetQueryString('productInfo'):"";
+        var returnUrl  = GetQueryString('returnUrl')?GetQueryString('returnUrl'):"";
+        var notifyUrl = GetQueryString('notifyUrl')?GetQueryString('notifyUrl'):"";
+        sessionStorage.setItem('externalTraceNo', externalTraceNo);
+        sessionStorage.setItem('merchantCode', merchantCode);
+        sessionStorage.setItem('merchantId', merchantId);
+        sessionStorage.setItem('terminalId', terminalId);
+        sessionStorage.setItem('amt', amt);
+        sessionStorage.setItem('secretInfo', secretInfo);
+        sessionStorage.setItem('branchName', branchName);
+        sessionStorage.setItem('branchId', branchId); 
+        sessionStorage.setItem("productInfo",productInfo);
+        sessionStorage.setItem('returnUrl', returnUrl);
+        sessionStorage.setItem('notifyUrl', notifyUrl);
+
+        //C扫B
+        if(userAgent === 'WX') {
+            window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+config.wxAppId+'&redirect_uri='+encodeURIComponent(config.csbRedirectUrl)+'&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
+        }else if(userAgent === 'ALIPAY') { //支付宝扫码
+            window.location.href = 'https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id='+config.zfbAppId+'&scope=auth_base&redirect_uri='+encodeURIComponent(config.csbRedirectUrl);
+        }else {
+             window.location.href = './other.html';
+        }
+  </script>
+</body>
+
+</html>

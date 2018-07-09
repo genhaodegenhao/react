@@ -1,0 +1,292 @@
+/**
+ * author:shimin.chen.wb;
+ * time:2017/8/18;
+ * description:支付结果css;
+ */
+.page-content {
+    backgroud-color:#EFEFF4;
+}
+/*订单成功 start*/
+.pay-message {
+    //height: 102px;
+    padding: 20px 0;
+}
+.tips {
+    text-align: center;
+    line-height:17px;
+}
+.tips > i {
+    display: inline-block;
+    margin-top:3px;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    background: url(../images/tips-icon.png) no-repeat;
+    background-size: 100%;
+}
+.tips > span {
+    margin-left:4px;
+    vertical-align: middle;
+    font-size:12px;
+    color:#F54D4F;
+}
+.pay-status {
+    padding:12px 15px 0;
+    text-align: center;
+}
+.pay-status > p {
+    font-weight: bold;
+    font-size:24px;
+    color:#333;
+    line-height: 1.4;
+}
+.pay-status > p:first-child {
+    font-size:22px;
+}
+.pay-money {
+    padding-top:12px;
+    text-align: center;
+}
+.pay-money > span {
+    font-size:15px;
+    color:#666;
+}
+.order-message {
+    min-height:122px;
+    background-color:#FFF;
+    box-shadow: inset 0 0 0 0 #DEDEDE;
+    .store-name {
+        position: relative;
+        padding-left:15px;
+        height:43px;
+        font-size:16px;
+        color:#333;
+        line-height:43px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #EEE;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+        }
+    }
+    .item-message {
+        padding:0 15px;
+        height:39px;
+        line-height:39px;
+        .order-label {
+            font-size:15px;
+            color:#999;
+        }
+        .order-input {
+            font-size:15px;
+            color:#666;
+        }
+    }
+}
+/*订单成功 end*/
+
+/*订单失败 start*/
+.pay-failure {
+    padding-bottom:65px;
+    background-color:#FFF;
+    .table-number {
+        display:inline-block;
+        height:136px;
+        width:100%;
+        font-size:24px;  
+        font-weight: bold;
+        color:#333;
+        text-align:center;
+        line-height:136px;  
+    }
+    .status-icon {
+        height:82px;
+        text-align:center;
+        i {
+            display:inline-block;
+            width:75.5px;
+            height:81.7px;
+            background:url(../images/failure-icon.png) no-repeat;
+            background-size:100%;
+        }
+    }
+    .order-description {
+        margin-top:52.3px;
+        font-size:0;
+        text-align:center;
+        .order-status {
+            display: block;
+            height: 32px;
+            font-size:22px;    
+            font-weight: bold;
+            color:#333;
+            line-height: 32px;
+        }
+        .order-tips {
+            display: block;
+            height:32px;
+            font-size:17px;   
+            color:#2A2A2A;
+            line-height:32px;
+        }
+        .order-number {
+            display: block;
+            height:32px;
+            font-size:17px;   
+            color:#2A2A2A;
+            line-height:32px;
+        }
+    }
+}
+/*订单失败 end*/
+/*订单超时 start*/
+.pay-out-time {
+    .status-icon {
+        i {
+            display:inline-block;
+            width:75.5px;
+            height:81.7px;
+            background:url(../images/out-time-icon.png) no-repeat;
+            background-size:100%;
+        }
+    }
+}
+.bottom-logo {
+    position: absolute;
+    bottom:0px;
+    width:100%;
+    height:71px;
+    font-size:14px;
+    color:#999;
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        i {
+            display:inline-block;
+            margin: 0 5px;
+            width:32px;
+            height:20px;
+            background:url(../images/bottom-logo@2x.png) no-repeat;
+            background-size:100%;
+            vertical-align: middle;
+        }
+    }
+}
+/*订单超时 end*/
+
+/*订单列表 start*/
+.order-list {
+        background-color: #fff;
+        .menu-list-title {    
+            position: relative;
+            font-size: 16px;
+            color: #333333;
+            letter-spacing: -0.47px;
+            text-indent: 15px;
+            line-height: 44px;
+            box-shadow: inset 0 0 0 0 #DEDEDE;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                background: #EEEEEE;
+                width: 100%;
+                height: 1px;
+                -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+            }
+        }
+
+        .menu-list-items {
+            postion:relative;
+            font-size: 15px;
+            color: #999999;
+            letter-spacing: -0.44px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                background: #EEEEEE;
+                width: 100%;
+                height: 1px;
+                -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+            }
+            .menu-list-item {
+                overflow: hidden;
+                height: 33px;
+                line-height: 33px;
+                .menu-list-item-name {
+                    float: left;
+                    width: 259px;
+                    text-indent: 15px;
+                }
+
+                .menu-list-item-num {
+                    float: left;
+                }
+
+                .menu-list-item-sum {
+                    float: right;
+                    margin-right: 15px;
+                }
+            } 
+        }
+        .menu-list-bottom {
+            //border-top:1px solid #EEEEEE;
+            position:relative;
+            text-align: center;
+            line-height: 35px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                background: #EEEEEE;
+                width: 100%;
+                height: 1px;
+                -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+            }
+            a {
+                text-decoration: none;
+
+                .menu-list-bottomBar {
+                    width: 10px;
+                    height: 6px;
+                    vertical-align: middle;
+                }
+
+                span {
+                    margin-left:5px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 14px;
+                    color: #333333;
+                    letter-spacing: -0.41px;
+                    vertical-align: middle;
+                }
+
+            }
+        }
+    }
+/*订单列表 end*/

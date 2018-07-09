@@ -1,0 +1,37 @@
+{
+  "data": {
+    "merchantStatistics": [
+      {
+        "count": 0,
+        "merchantType": 0
+      },
+      {
+        "count": 15,
+        "merchantType": 1
+      },
+      {
+        "count": 4,
+        "merchantType": 2
+      }
+    ],
+    "noticeStatistics": {
+        "count": 10
+    },
+    "orderStatistics": [
+      {
+        "count": 1,
+        "orderType": 0
+      },
+      {
+        "count": 15,
+        "orderType": 1
+      },
+      {
+        "count": 4,
+        "orderType": 2
+      }
+    ]
+  },
+  "message": "0",
+  "status": "0"
+}

@@ -1,0 +1,11 @@
+{
+  "env": "stage",
+  "publicPath": "https://pay.99bill.com/sandbox/html/smf",
+  "host": "pay.99bill.com",
+  "port": "80",
+  "fetchConfig": {
+    "isMock": false,
+    "fetchUrl": ""
+  },
+  "debug": true
+}

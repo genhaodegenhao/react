@@ -1,0 +1,10 @@
+{
+  "env": "production",
+  "publicPath": "https://pay.99bill.com/prod/html/smf",
+  "host": "pay.99bill.com",
+  "port": "80",
+  "fetchConfig": {
+    "isMock": false,
+    "fetchUrl": ""
+  }
+}

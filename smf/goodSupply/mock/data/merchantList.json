@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "billAccount": "13123@99bill.com",
+      "date": "2018-01-20",
+      "memberCode": "123123123",
+      "merchantCode": 48306,
+      "merchantName": "阿拉丁麻辣烫有限公司"
+    },
+    {
+      "billAccount": "13123@99bill.com",
+      "date": "2018-01-20",
+      "memberCode": "123123123",
+      "merchantCode": 48306,
+      "merchantName": "阿拉丁麻辣烫有限公司"
+    },
+    {
+      "billAccount": "13123@99bill.com",
+      "date": "2018-01-20",
+      "memberCode": "123123123",
+      "merchantCode": 48306,
+      "merchantName": "阿拉丁麻辣烫有限公司"
+    },
+    {
+      "billAccount": "13123@99bill.com",
+      "date": "2018-01-20",
+      "memberCode": "123123123",
+      "merchantCode": 48306,
+      "merchantName": "阿拉丁麻辣烫有限公司"
+    },
+    {
+      "billAccount": "13123@99bill.com",
+      "date": "2018-01-20",
+      "memberCode": "123123123",
+      "merchantCode": 48306,
+      "merchantName": "阿拉丁麻辣烫有限公司"
+    }
+  ],
+  "message": "测试内容gk2t",
+  "status": "0",
+  "total": 9
+}

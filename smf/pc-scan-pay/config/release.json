@@ -1,0 +1,11 @@
+{
+  "env": "release",
+  "publicPath": "https://pay.99bill.com/stage2/html/smf",
+  "host": "",
+  "port": "8080",
+  "fetchConfig": {
+    "isMock": false,
+    "fetchUrl": ""
+  },
+  "debug": false
+}
